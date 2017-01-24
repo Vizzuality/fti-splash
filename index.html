@@ -16,17 +16,14 @@
     </div>
   </main>
   <script>
-
-    document.onreadystatechange = function () {
-      if (document.readyState === 'complete') {
-        var email = 'IG1hcmllLnZhbGxlZUB3cmkub3Jn';
-        var newEmail = atob(email);
-        var mailto = 'mailto:'+newEmail.trim();
-        var email = document.getElementById('email');
-        email.setAttribute('href',mailto);
-        email.innerText = newEmail;
-      }
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+      var email = 'IG1hcmllLnZhbGxlZUB3cmkub3Jn';
+      var newEmail = atob(email);
+      var mailto = 'mailto:'+newEmail.trim();
+      var email = document.getElementById('email');
+      email.setAttribute('href',mailto);
+      email.innerText = newEmail;
+    });
   </script>
 </body>
 </html>
