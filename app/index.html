@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FTI-Splash</title>
+  <link rel="stylesheet" type="text/css"  href="app.css"></link>
+</head>
+<body>
+  <main id="app">
+    <div class="greeting">
+      <p>
+        We are currently upgrading out platfrom and transitioning to a new website. In the meantime
+        if you have any questions and requests about the Forest Transparency Initiative, please
+        contact Marie Vallée at <a id="email"></a>
+      </p>
+    </div>
+  </main>
+  <script>
+
+    document.onreadystatechange = function () {
+      if (document.readyState === 'complete') {
+        var email = 'IG1hcmllLnZhbGxlZUB3cmkub3Jn';
+        var newEmail = atob(email);
+        var mailto = 'mailto:'+newEmail.trim();
+        var email = document.getElementById('email');
+        email.setAttribute('href',mailto);
+        email.innerText = newEmail;
+      }
+    }
+  </script>
+</body>
+</html>
