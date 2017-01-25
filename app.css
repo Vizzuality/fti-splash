@@ -1,6 +1,10 @@
 @font-face {
-    font-family: "acumin-pro";
-    src: url('fonts/acumin-pro-condensed-bold.woff');
+    font-family: "pragati-narrow";
+    src: url('fonts/pragati-narrow-bold.woff');
+}
+
+* {
+    box-sizing: border-box;
 }
 
 #app {
@@ -37,9 +41,9 @@
     padding: 22px;
     font-size: 38px;
     color: #fff;
-    max-width: 50%;
+    max-width: 60%;
     position: relative;
-    font-family: "acumin-pro", "sans-serif";
+    font-family: "pragati-narrow", "sans-serif";
     -moz-osx-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
 }
@@ -73,4 +77,30 @@
     left: 0;
     -webkit-transform: translate(-100%, 50%);
     transform: translate(-100%, 50%);
+}
+
+@media (max-width: 1074px) {
+
+    .greeting {
+        font-size: 22px;
+        padding: 0;
+    }
+
+    .greeting:before {
+        -webkit-transform: translate(25%, -100%);
+        transform: translate(25%, -100%);
+    }
+}
+
+@media (max-height: 645px) {
+
+    .greeting {
+        font-size: 22px;
+        padding: 0;
+    }
+
+    .greeting:before {
+        -webkit-transform: translate(25%, -100%);
+        transform: translate(25%, -100%);
+    }
 }
